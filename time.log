@@ -1,0 +1,50 @@
+2.5 hours - initial board setup, flip animations, play validity, testing
+1.5 hour  - keep score, take turns, animate score changes
+0.5 hour  - add turn indicator, last stone indicator, valid move indicators
+0.5 hour  - refactor indicators, add passing
+0.5 hour  - add game over indicator/state
+0.5 hour  - handle ties, add reset button
+0.25 hour - set up github repo
+0.25 hour - tweaking styles
+0.5 hour  - add styles for landscape and portrait mode and add a video element
+1.0 hour  - basic webrtc connections
+0.5 hour  - remote play via p2p data
+0.5 hour  - debugging RTC
+0.5 hour  - fix RTC shut down, pass during remote play, zoom on mobile
+0.25 hour - fix button & border sizing, hide IDs once connected
+0.25 hour - fix connection close detection and indicate opponent bailed
+0.5 hour  - handle offline state and display corner ribbon
+0.5 hour  - add web app manifest and improve lighthouse scores
+0.5 hour  - add service worker
+0.25 hour - fix glitchy pass indicator
+0.25 hour - fix rapid play bug and add danger zone indicators
+0.5 hour  - fix spacing for various screen sizes, add version banner
+===========
+12.5 hours = v1.0.0
+
+0.25 hour - fix spot positioning with CSS variables
+1.0 hour  - massive CSS cleanup and refactor
+1.5 hour  - massive JS cleanup and lots of comments
+1.5 hour  - writing and formatting docs
+0.5 hour  - proof-read and fix the docs
+0.5 hour  - fix infinite loop when nobody can play, fix who goes first
+0.25 hour - fix icon to match correct starting game state (black goes first)
+0.25 hour - add waiting indicator for PeerJS, disable pull-to-refresh
+0.5 hour  - add novideo mode and connection error handling
+===========
+6.25 hours = v1.1.0
+
+0.5 hour  - add own ID generator instead of relying on PeerJS
+1.0 hour  - add table ID support for pure URL-based joining
+===========
+1.5 hours = v1.2.0
+
+0.5 hour  - partial observer support (no sharing of game state on join)
+0.5 hour  - full observer support (sending full game state on join)
+===========
+1.0 hours = v1.3.0
+
+0.25 hour - alternate peer server support
+0.5 hour  - do not set up game in table mode until connected
+===========
+0.75 hours = v1.3.2

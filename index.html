@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Othello</title>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Multi-player, browser-based, server-less Othello.  Can be played locally or P2P with video chat."
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="othello.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+
+    <script
+      defer
+      src="https://unpkg.com/peerjs@1.0.4/dist/peerjs.min.js"
+    ></script>
+    <!-- Don't defer this, or we get a flash of an incomplete page. -->
+    <script src="othello.js"></script>
+    <script>
+      // Initialize the app when the DOM is fully loaded.
+      document.addEventListener("DOMContentLoaded", init);
+    </script>
+  </head>
+  <body>
+    <div id="offlineRibbon" class="hide-by-default">OFFLINE</div>
+
+    <div id="appContainer">
+      <div id="gameContainer">
+        <div id="scoreBoard"></div>
+        <div id="gameBoard"></div>
+        <button id="resetButton">Reset Game</button>
+        <button id="remoteButton" class="hide-by-default">
+          P2P Multi-player
+        </button>
+        <div id="tableStatus" class="hide-by-default"></div>
+      </div>
+
+      <div id="p2pContainer" class="hide-by-default">
+        <div id="videoContainer" class="hide-by-default">
+          <video autoplay id="friend"></video>
+          <video autoplay id="me" muted></video>
+          <button id="muteButton"></button>
+        </div>
+
+        <div id="idContainer" class="hide-by-default">
+          <label for="myId">Your ID:</label>
+          <input id="myId" type="text" readonly />
+
+          <label for="joinPeer">Your friend's ID:</label>
+          <input id="joinPeer" type="text" />
+        </div>
+
+        <button id="closeRtcButton"></button>
+      </div>
+    </div>
+  </body>
+</html>
